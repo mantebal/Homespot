@@ -1,0 +1,11 @@
+TODO - Design
+#index
+
+#functionality
+	-User Interaction edits from Andrew
+		- Button Order
+		- Delete Icon
+#about
+#contact
+    -Contact form?
+    -Social media?

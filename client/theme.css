@@ -1,0 +1,1392 @@
+/*Reset margins and padding throughout before display styles are applied*/
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/*Fade animation for site elements, UX*/
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/*Set background to moving gradient with animation, adapted from Ian Forrest of https://www.gradient-animator.com/ */
+body {
+  font-size: 26px;
+  line-height: 2.5em;
+  background: linear-gradient(243deg, #ff9966, #ff5e62, #d76d77);
+  background-size: 800% 800%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+/*Navigation styling. White text, clear background*/
+nav {
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 20px;
+  -webkit-animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  -ms-animation: fadein 2s;
+  -o-animation: fadein 2s;
+  animation: fadein 2s;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+nav ul li a {
+  color: white;
+  display: block;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  transition: 0.3s ease;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+
+}
+
+nav ul li:first-child {
+  margin-right: auto;
+}
+
+nav ul li a.logo {
+  font-family: 'Major Mono Display', monospace;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+nav ul li a:hover {
+  border-bottom: 4px solid #ffffff;
+
+}
+
+nav button {
+  background-color: transparent;
+  -moz-border-radius: 32px;
+  -webkit-border-radius: 32px;
+  border-radius: 32px;
+  border: 6px solid white;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  font-family: Arial;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  padding: 13px 28px;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+/*Background seperation of welcome section and login section*/
+#card-one {
+  margin-top: 50px;
+  margin-left: 150px;
+  border-radius: 20px;
+  padding: 20px;
+  padding-bottom: 200px;
+  -webkit-animation: slide-in-left 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-in-left 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  -ms-animation: fadein 2s;
+  -o-animation: fadein 2s;
+  animation: fadein 2s;
+}
+
+.errormsg {
+  margin-top: 30px;
+  font-family: 'Raleway', sans-serif;
+  color:red;
+  font-size:20px;
+}
+
+/*Spacer*/
+#filler {
+  height: 200px;
+}
+
+/*Slide in animation adapted from Animista CSS animations http://animista.net/play/basic/slide/slide-left*/
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#card-one h1 {
+  font-family: 'Raleway', sans-serif;
+  padding: 10px;
+  margin-left: 20px;
+  font-size: 4rem;
+  color: white;
+}
+
+#card-one p {
+  font-family: 'Raleway', sans-serif;
+  padding-left: 10px;
+  margin-left: 20px;
+  font-size: 1.5rem;
+  line-height: 1.8em;
+  color: white;
+}
+
+#card-one a {
+  text-decoration: underline;
+  color: white;
+
+}
+
+.homeSpot {
+  font-family: 'Major Mono Display', monospace;
+  -webkit-animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  -ms-animation: fadein 2s;
+  -o-animation: fadein 2s;
+  animation: fadein 2s;
+}
+/*Form styling, login forms*/
+#bg-forms {
+  background-color: white;
+  padding-top: 30px;
+  margin-top: 80px;
+  padding-bottom: 100px;
+
+}
+
+#forms {
+  margin-left: 200px;
+  margin-top: 100px;
+  -webkit-animation: slide-in-left 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-in-left 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+}
+
+#forms h2 {
+  margin-top: 40px;
+  font-size: 3rem;
+  color: black;
+  font-family: 'Raleway', sans-serif;
+}
+
+#forms h3 {
+  margin-top: 40px;
+  font-size: 2rem;
+  color: black;
+  font-family: 'Raleway', sans-serif;
+}
+
+#forms a {
+  text-decoration: underline;
+  color: black;
+}
+
+#forms .user-input {
+  height: 84px;
+  width: 200px;
+  border: none;
+  margin-right: 10px;
+  text-indent: 5px;
+  font-family: 'Raleway', sans-serif;
+  color: black;
+  font-size: 1.2rem;
+
+}
+
+#forms button {
+  background-color: transparent;
+  -moz-border-radius: 32px;
+  -webkit-border-radius: 32px;
+  border-radius: 32px;
+  border: 6px solid black;
+  display: inline-block;
+  cursor: pointer;
+  color: black;
+  font-family: Arial;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  padding: 13px 28px;
+  text-decoration: none;
+}
+
+
+/*-----Functionality-----*/
+/*Functionality/My Devices styling, showcase material card in center of screen*/
+.f-card {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  background-color: #636e72;
+  width: 40%;
+  margin-top: 10%;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 25px;
+}
+
+.f-card h1 {
+  color: white;
+  text-indent: 18px;
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+
+}
+
+#intro h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 4rem;
+    color: white;
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+
+}
+
+.f-card p {
+  color: white;
+  background-color: #2d3436;
+  padding: 10px 10px 10px 0px;
+  text-indent: 18px;
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.f-card .leftFirst {
+  float: left;
+
+}
+
+#add button {
+  background-color: transparent;
+  -moz-border-radius: 32px;
+  -webkit-border-radius: 32px;
+  border-radius: 32px;
+  border: 6px solid white;
+  /* display: inline-block; */
+  cursor: pointer;
+  color: white;
+  font-family: Raleway;
+  font-size: 1.2rem;
+  /* margin-top: 50px; */
+  padding: 13px 28px;
+  text-decoration: none;
+  /* margin-left: 300px; */
+  /* width: 30%; */
+  display: block;
+  margin: 0 auto;
+}
+
+#add button a {
+  text-decoration: none;
+  color: white;
+}
+/*Toggle slider adapted from W3 Schools Toggle Slider Tutorial https://www.w3schools.com/howto/howto_css_switch.asp*/
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 34px;
+  float: left;
+  margin-top: 18px;
+  margin-left: 20px;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #26de81;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #26de81;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.rounded {
+  border-radius: 34px;
+}
+
+.slider.rounded:before {
+  border-radius: 50%;
+}
+
+.functions {
+  margin-top: 30px;
+}
+
+.functions li {
+  padding-top: 0px;
+
+}
+/*Colour picker tool, resize and fit*/
+#color-picker {
+  position: relative;
+  width: 60px;
+  height: 34px;
+  float: left;
+  display: block;
+  margin-top: 18px;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+
+/*PHP Error*/
+
+
+
+.success {
+  color: lightgreen;
+  margin-left: 300px;
+}
+
+/*-----Sign-up Page-----*/
+
+#sign-up {
+  margin-left: 200px;
+  margin-top: 100px;
+  -webkit-animation: slide-in-left 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-in-left 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  line-height: 0.8;
+}
+
+#sign-up h2 {
+  margin-top: 40px;
+  font-size: 3rem;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+#sign-up h3 {
+  margin-top: 40px;
+  font-size: 2rem;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+#sign-up a {
+  text-decoration: underline;
+  color: white;
+}
+
+#sign-up .user-input {
+  height: 62px;
+  width: 200px;
+  border: none;
+  margin-right: 10px;
+  text-indent: 5px;
+  font-family: 'Raleway', sans-serif;
+  color: black;
+  font-size: 1.2rem;
+
+}
+
+#sign-up button {
+  background-color: transparent;
+  -moz-border-radius: 32px;
+  -webkit-border-radius: 32px;
+  border-radius: 32px;
+  border: 6px solid white;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  font-family: Arial;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  padding: 13px 28px;
+  text-decoration: none;
+}
+
+/*-----Add Device Page-----*/
+#add-form {
+  margin-top: 80px;
+  margin-left: 300px;
+}
+
+#add-form .user-input {
+  height: 62px;
+  width: 200px;
+  border: none;
+  margin-right: 10px;
+  text-indent: 5px;
+  font-family: 'Raleway', sans-serif;
+  color: black;
+  font-size: 1.2rem;
+
+}
+
+#add-form select {
+  height: 62px;
+  width: 200px;
+  border: none;
+  margin-right: 10px;
+  text-indent: 5px;
+  font-family: 'Raleway', sans-serif;
+  color: black;
+  font-size: 1.2rem;
+
+}
+
+#add-form button {
+  background-color: transparent;
+  -moz-border-radius: 32px;
+  -webkit-border-radius: 32px;
+  border-radius: 32px;
+  border: 6px solid white;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  font-family: Arial;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  padding: 13px 28px;
+  text-decoration: none;
+}
+
+#delete {
+  position: relative;
+  margin: 3%;
+  color: white;
+}
+
+#delete:hover {
+  cursor: pointer;
+}
+
+#delete-btn {
+  background: transparent;
+  border: 0;
+  height: 26px;
+  width: 26px;
+  position: absolute;
+
+}
+
+
+.success {
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  margin-top: 20px;
+}
+
+
+
+
+/*Tab changing code adapted and taken from W3 Tab Tutorial https://www.w3schools.com/howto/howto_js_tabs.asp*/
+/*Tabs*/
+/* Style the tab */
+.tab {
+  overflow: hidden;
+    background-color: #636e72;
+    width: 50%;
+    /* margin-left: 22%; */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 12px;
+    list-style-type: none;
+    margin: 50px auto;
+}
+
+
+/*fixing jakes weird nav */
+nav ul:nth-child(2){
+  width: 50%;
+    text-align: center !important;
+    margin: 0 auto !important;
+}
+
+nav ul:nth-child(2) li{
+  margin: 0 auto;
+}
+
+nav ul:nth-child(2) li a{
+  margin: 50px auto 0 auto !important;
+}
+nav ul:first-child {
+  margin-top:50px;
+}
+
+nav {
+  margin-right:0 !important;
+  margin-left: 0 !important;
+}
+
+#smolNav {
+  margin-bottom:50px;
+}
+
+/* add new device */
+#add-form .user-input {
+ /* width:2em;*/
+
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  color: white;
+  font-size: 22px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  opacity: 0.7;
+  background-color: dark-grey;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent ul li {
+  list-style-type: none;
+  margin-top: 30px;
+  margin-bottom: 150px;
+}
+/*Hide small navigation bar for responsive content*/
+#smolNav {
+  display: none !important;
+  animation: none;
+}
+
+#showMenu {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+/*Mobile sizing of site, centre and resize elements*/
+@media only screen and (min-device-width : 300px) and (max-device-width : 700px) and (orientation : portrait) {
+
+  nav {
+    text-align: center;
+
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav ul li {
+    list-style-type: none;
+  }
+
+  nav ul li a {
+    color: white;
+    display: none;
+    transition: 0.3s ease;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+
+  }
+
+  nav ul li a.logo {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 5rem;
+    font-weight: 400;
+    display: block;
+    
+  }
+
+  nav ul li a.menuBtn {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 3rem;
+    font-weight: 400;
+    display: block;
+
+  }
+
+  nav ul li a:hover {
+    border-bottom: 4px solid #ffffff;
+
+  }
+
+  nav button {
+    background-color: transparent;
+    -moz-border-radius: 32px;
+    -webkit-border-radius: 32px;
+    border-radius: 32px;
+    border: 6px solid white;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    font-family: Arial;
+    font-size: 2rem;
+    margin-top: 10px;
+    padding: 13px 28px;
+    text-decoration: none;
+    margin-right: 5px;
+  }
+
+  #card-one {
+    margin-top: 50px;
+    margin-left: -40px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+    padding-bottom: 200px;
+    -webkit-animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    -ms-animation: fadein 2s;
+    -o-animation: fadein 2s;
+    animation: fadein 2s;
+  }
+
+  #filler {
+    height: 200px;
+  }
+
+  #bg-forms {
+    background-color: white;
+    padding-top: 30px;
+    margin-top: 80px;
+    padding-bottom: 100px;
+
+  }
+
+  #forms {
+    margin-left: -40px;
+    margin-top: 100px;
+    text-align: center;
+    -webkit-animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    -ms-animation: fadein 2s;
+    -o-animation: fadein 2s;
+    animation: fadein 2s;
+
+  }
+
+  #forms h2 {
+    margin-top: 40px;
+    font-size: 4rem;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  #forms h3 {
+    margin-top: 20px;
+    font-size: 2.5rem;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  #forms a {
+    text-decoration: underline;
+    color: black;
+  }
+
+  #forms .user-input {
+    height: 84px;
+    width: 250px;
+    border: none;
+    margin-right: 10px;
+    text-indent: 5px;
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    font-size: 2rem;
+    padding: 10px;
+    margin-top: 20px;
+
+  }
+
+  #forms button {
+    background-color: transparent;
+    -moz-border-radius: 32px;
+    -webkit-border-radius: 32px;
+    border-radius: 32px;
+    border: 6px solid black;
+    display: inline-block;
+    cursor: pointer;
+    color: black;
+    font-family: Arial;
+    font-size: 3rem;
+    margin-top: 40px;
+    padding: 18px 32px;
+    text-decoration: none;
+  }
+
+  .showing {
+    display: block;
+
+  }
+
+  #smolNav li a {
+    color: white;
+    transition: 0.3s ease;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    margin-top: 40px;
+    font-size: 2rem;
+
+  }
+
+  #smolNav {
+    margin-left: -150px;
+    animation: none;
+    display: block !important;
+  }
+
+  #smolNav li:first-child {
+    margin-right: 0;
+    margin-left: 180px;
+  }
+
+  #intro h1 {
+    text-align: center;
+    margin: 100px auto;
+    margin-top: 20px;
+  }
+
+  #add button {
+    font-size: 3rem;
+  }
+
+  .tab {
+    margin-bottom:100px;
+    margin-left: 25%;
+    transform: scale(1.5)
+  }
+
+  .f-card {
+    width:80%;
+    margin: 50px auto;
+  }
+
+  .f-card h1 {
+    font-size: 3rem;
+    padding: 20px;
+  }
+
+  .f-card p {
+    font-size: 3rem;
+    line-height: 2;
+    padding: 10px;
+  }
+
+  .toggle {
+    position: relative;
+    width: 120px;
+    height: 68px;
+    float: left;
+    margin-top: 18px;
+    margin-left: 20px;
+  }
+
+  .toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 58px;
+    width: 64px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked+.slider {
+    background-color: #26de81;
+  }
+
+  input:focus+.slider {
+    box-shadow: 0 0 1px #26de81;
+  }
+
+  input:checked+.slider:before {
+    -webkit-transform: translateX(52px);
+    -ms-transform: translateX(52px);
+    transform: translateX(52px);
+  }
+
+  .slider.rounded {
+    border-radius: 34px;
+  }
+
+  .slider.rounded:before {
+    border-radius: 50%;
+  }
+
+  input[type="color"i] {
+    position: relative;
+    width: 120px;
+    height: 64px;
+    float: left;
+    display: block;
+    margin-top: 18px;
+    margin-right: 10px;
+    margin-left: 20px;
+  }
+
+  .fa-trash:before {
+    content: "\f1f8";
+    font-size: 4rem;
+  }
+
+  #showMenu {
+    display: inline-block;
+    margin-left: 160%;
+    margin-top: 20px;
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------COLOUR PICKER WHEEL VERSION HUGE NEEDS RESIZING
+.circle-container {
+    position: relative;
+    margin-top:200px;
+}
+.circle-container a {
+    display: block;
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 240px; height: 160px;
+    margin: -32px;
+}
+.circle-container img { display: block; width: 100%; }
+.white { transform: rotate(0deg) translate(203px, 8px) rotate(90deg); } 
+.yellow { transform: rotate(45deg) translate(216px) rotate(45deg); }
+.green { transform: rotate(90deg) translate(166px, 28px) rotate(0deg); }
+.black{ transform: rotate(0deg) translate(-96px) rotate(95deg); }
+.red { transform: rotate(135deg) translate(208px) rotate(-40deg); }
+.pink { transform: rotate(-135deg) translate(192px, 30px) rotate(230deg); }
+.blue { transform: rotate(-90deg) translate(160px, -8px) rotate(187deg); }
+.turq { transform: rotate(315deg) translate(208px, 24px) rotate(-222deg); }
+
+.circle-container a.red{
+    width:256px;
+    padding:none;
+    transition: all .2s ease-in-out;
+}
+.circle-container a.green{
+    width:288px;
+    padding:none;
+    transition: all .2s ease-in-out;
+}
+.circle-container a.pink{
+    width:256px;
+    padding:none;
+    transition: all .2s ease-in-out;
+}
+.circle-container a.blue{
+    width:272px;
+    padding:none;
+    transition: all .2s ease-in-out;
+}
+.circle-container a.yellow{
+    width:272px;
+    padding:none;
+    transition: all .2s ease-in-out;
+}
+.circle-container a.white{
+    width:224px;
+    padding:none;
+    transition: all .2s ease-in-out;
+}
+.circle-container a.turq{
+    width:256px;
+    padding:none;
+    transition: all .2s ease-in-out;
+}
+
+.circle-container a.center{
+    margin-left:-70px;
+    margin-top:-60px;
+    width:256px;
+    padding:none;
+
+}
+.circle-container #colorDisplay{
+    display:none;
+    transition: all .2s ease-in-out;
+}
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Tablet size styling*/
+@media only screen and (min-device-width : 400px) and (max-device-width : 1170px) and (orientation : portrait) {
+
+  nav {
+    text-align: center;
+
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav ul li {
+    list-style-type: none;
+  }
+
+  nav ul li a {
+    color: white;
+    display: none;
+    transition: 0.3s ease;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+
+  }
+
+  nav ul li a.logo {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 5rem;
+    font-weight: 400;
+    display: block;
+  }
+
+  nav ul li a.menuBtn {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 3rem;
+    font-weight: 400;
+    display: block;
+
+  }
+
+  nav ul li a:hover {
+    border-bottom: 4px solid #ffffff;
+
+  }
+
+  nav button {
+    background-color: transparent;
+    -moz-border-radius: 32px;
+    -webkit-border-radius: 32px;
+    border-radius: 32px;
+    border: 6px solid white;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    font-family: Arial;
+    font-size: 2rem;
+    margin-top: 10px;
+    padding: 13px 28px;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+
+  #card-one {
+    margin-top: 50px;
+    margin-left: -40px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+    padding-bottom: 200px;
+    -webkit-animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    -ms-animation: fadein 2s;
+    -o-animation: fadein 2s;
+    animation: fadein 2s;
+  }
+
+  #filler {
+    height: 200px;
+  }
+
+  #bg-forms {
+    background-color: white;
+    padding-top: 30px;
+    margin-top: 80px;
+    padding-bottom: 100px;
+
+  }
+
+  #forms {
+    margin-left: -40px;
+    margin-top: 100px;
+    text-align: center;
+    -webkit-animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    -ms-animation: fadein 2s;
+    -o-animation: fadein 2s;
+    animation: fadein 2s;
+
+  }
+
+  #forms h2 {
+    margin-top: 40px;
+    font-size: 4rem;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  #forms h3 {
+    margin-top: 20px;
+    font-size: 2.5rem;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  #forms a {
+    text-decoration: underline;
+    color: black;
+  }
+
+  #forms .user-input {
+    height: 84px;
+    width: 250px;
+    border: none;
+    margin-right: 10px;
+    text-indent: 5px;
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    font-size: 2rem;
+    padding: 10px;
+    margin-top: 20px;
+
+  }
+
+  #forms button {
+    background-color: transparent;
+    -moz-border-radius: 32px;
+    -webkit-border-radius: 32px;
+    border-radius: 32px;
+    border: 6px solid black;
+    display: inline-block;
+    cursor: pointer;
+    color: black;
+    font-family: Arial;
+    font-size: 3rem;
+    margin-top: 40px;
+    padding: 18px 32px;
+    text-decoration: none;
+  }
+
+  
+
+  .showing {
+    display: block;
+  }
+
+  #smolNav li a {
+    color: white;
+    transition: 0.3s ease;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    margin-top: 40px;
+    font-size: 2rem;
+
+  }
+
+  #smolNav {
+    margin-left: -150px;
+    animation: none;
+    display: block !important;
+  }
+
+  #smolNav li:first-child {
+    margin-right: 0;
+    margin-left: 180px;
+
+
+  }
+
+  #intro h1 {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+
+  }
+
+  #add button {
+    font-size: 3rem;
+   margin:100px auto;
+  }
+
+  .tab {
+    margin-left: 25%;
+    transform: scale(1.5)
+  }
+
+  .f-card {
+    width: 70%;
+    margin: 0 auto;
+
+  }
+
+  .f-card h1 {
+    font-size: 3rem;
+    padding: 20px;
+  }
+
+  .f-card p {
+    font-size: 3rem;
+    line-height: 2;
+    padding: 10px;
+  }
+
+  .toggle {
+    position: relative;
+    width: 120px;
+    height: 68px;
+    float: left;
+    margin-top: 18px;
+    margin-left: 20px;
+  }
+
+  .toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 58px;
+    width: 64px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked+.slider {
+    background-color: #26de81;
+  }
+
+  input:focus+.slider {
+    box-shadow: 0 0 1px #26de81;
+  }
+
+  input:checked+.slider:before {
+    -webkit-transform: translateX(52px);
+    -ms-transform: translateX(52px);
+    transform: translateX(52px);
+  }
+
+  .slider.rounded {
+    border-radius: 34px;
+  }
+
+  .slider.rounded:before {
+    border-radius: 50%;
+  }
+
+  input[type="color"i] {
+    position: relative;
+    width: 120px;
+    height: 64px;
+    float: left;
+    display: block;
+    margin-top: 18px;
+    margin-right: 10px;
+    margin-left: 20px;
+  }
+
+  .fa-trash:before {
+    content: "\f1f8";
+    font-size: 4rem;
+  }
+
+  #showMenu {
+    display: inline-block;
+    margin-left: 160%;
+    margin-top: 20px;
+
+  }
+}
+
+/* media query to fix nav bar */
+
+@media only screen and (max-width:1040px) {
+  nav {
+    margin-right: 5%;
+    margin-left:0;
+  }
+}
+
+@media only screen and (max-width:915px) {
+  nav {
+    margin-right: 2%;
+  }
+  nav ul li a {
+    padding:1em;
+  }
+}

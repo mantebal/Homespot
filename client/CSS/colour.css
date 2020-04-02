@@ -1,0 +1,89 @@
+.colorContainer{
+    width: 719px;
+    height: 374px;
+    transform: scale(0.4);
+	filter: saturate(0.7);
+    transform-origin: center center;
+    background: none;
+    margin-top: -22vmin;
+	margin-bottom: -10vmin;
+	position: relative;
+	z-index: 99;
+	right:-10%;
+}
+.part{
+	width:40%;
+	margin:0;
+	transform:scale(0.001);
+	transition: 1s all;
+	opacity:0.8;
+	margin-top:20%;
+	background:none;
+	position:absolute;
+	transition: 1s all;
+}
+.whiteColorPart{
+	margin-left:0;
+	transform:scale(0.001) translateX(0%) translateY(0%);
+	transform-origin: center bottom;
+	z-index:-2;
+}
+.yellowColorPart{
+	transform:scale(0.001) translateX(57%) translateY(10%);
+	transform-origin: left bottom;
+	z-index:-5;
+}
+.greenColorPart{
+	transform:scale(0.001) translateX(65%) translateY(89%);
+	transform-origin: left center;
+	z-index:-2;
+}
+.redColorPart{
+	transform:scale(0.001) translateX(57%) translateY(103%);
+	transform-origin: left top;
+	z-index:-5;
+}
+.blackColorPart{
+	transform:scale(0.001) translateY(62%);
+	transform-origin: center top;
+	z-index:-2;
+}
+.pinkColorPart{
+	transform:scale(0.001) translateX(-57%) translateY(103%);
+	transform-origin: right top;
+	z-index:-5;
+}
+.blueColorPart{
+	transform:scale(0.001) translateX(-65%) translateY(89%);
+	transform-origin: right center;
+	z-index:-2;
+}
+.turquioseColorPart{
+	transform:scale(0.001) translateX(-57%) translateY(10%);
+	transform-origin: right bottom;
+	z-index:-5;
+}
+
+.center{
+	z-index: 9999 !important;
+    width: 350px;
+    height: 350px;
+    background: black;
+    border-radius: 100%;
+    border: 1vmin solid #636e72;
+    margin: 0;
+    transform-origin: center center;
+	transition: 1s all;
+    transform: scale(0.5) translateX(-22%) translateY(65%);
+}
+
+.colorContainer:hover .part{
+	height:initial !important;
+	transform: translateX(15%) translateY(90%);
+	/*width:40%;*/
+	margin:0;
+}
+.colorContainer:hover .center{
+    transform-origin: center center;
+    transform: scale(1) translateX(-10%) translateY(34%);
+}
